@@ -1,5 +1,6 @@
 ## VERSIONES ANTERIORES A LA 17.10
-Utilizaremos el comando *"nano \etc\network\interfaces"* para entrar en la configuracion de las redes
+Utilizaremos el comando *"nano \etc\network\interfaces"* para entrar en la configuracion de las redes.
+
 El comando *nano* se utiliza para entrar o modificar el archivo.
 
 
