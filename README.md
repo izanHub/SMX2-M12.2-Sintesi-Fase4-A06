@@ -15,6 +15,9 @@ Para asignar una IP estatica , escribiremos lo sigueiente en el fichero **interf
 - netmask 255.255.255.0
 - gateway 192.168.1.1
 
+Aqui hos dejamos una representación de como queda todo en la terminal
+[(E+200U)"imagen"]
+
 (#) -> funciona para comentar una linea y decir que esa linea es puro texto y no lo interprete.
 
 Una vez hagamos los cambios que queremos tenemos la opcion de reiniciar todas las interfaces, pero esto puede ser un tanto bruto en algunos casos, este reinicio se ejecuta con estos comandos.
@@ -29,22 +32,30 @@ Tambien tenemos la opcion de reiniciar solo la interfaz que queremos, esta seria
 Para configurar el servidor DNS desberemos poner la siguiente direccion **fichero/etc/resolv.conf**, dentro de esta deberemos escribir lo siguiente:
 - nameserver 8.8.8.8
 
+[(E+200U)"imagen"]
 
 ## VERSIONES POSTERIORES A LA 17.10
 
 Estas versiones utilizan netplan.
  
- /etc/netplan/****.yaml
-si no existe el fichero -> sudo netplan generate
+Para encontrar el fichero en el cual debemos modificar la IP, tendremos que escribir el siguiente comando **/etc/netplan/****.yaml**.
 
-Establecer IP estatica
-dhcp4 : no
-Y definir la ip con su / y el gateway
-Y despues el nombre del servidor con su IP
-USAR ESPACIOS Y NO TAB -> USANDO EL TAB DA ERROR
-sudo netplan apply
+En caso de que no exista el fichero usaremos el comando **sudo netplan generate** para generar un fichero.
 
-Establecer IP dinamica
-dhcp: yes
-sudo netplan apply
+Para establecer una IP estatica deberemos seguir los siguientes pasos:
+- dhcp4 : no (En caso de que usemos IPv6 lo pondremos en el dhcp6)
+- address 192.255.255.0/24
+- gateway 192.168.1.1
 
+Despues de establecer la ip con la mascara y el gateway, establecermos el servidor, en este caso deberemos poner el nombre y la IP:
+- Google: 8.8.8.8
+
+Para apolicar todos estos cambios usaremos el comando **sudo netplan apply**
+
+Aqui hos dejamos una representación de como queda todo en la terminal
+[(E+200U)"imagen"]
+
+Para establecer una IP dinamica simplemente tendremos que poner "yes" en el apartado del dhcp y escribir el comando **sudo netplan apply** para aplicar los cambios, tras hacer esto se nos asignara una IP automaticamente.
+
+Aqui hos dejamos una representación de como queda todo en la terminal
+[(E+200U)"imagen"]
