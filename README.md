@@ -17,17 +17,16 @@ gateway 192.168.1.1
 
 (#) -> funciona para comentar una linea y decir que esa linea es puro texto y no lo interprete.
 
-Reiniciar todas las interficies
+Una vez hagamos los cambios que queremos tenemos la opcion de reiniciar todas las interfaces, pero esto puede ser un tanto bruto en algunos casos, este reinicio se ejecuta con estos comandos.
 - sudo service network restart
 - sudo service network stop
 - sudo service network start
 
-Reiniciar solo la interficie
+Tambien tenemos la opcion de reiniciar solo la interfaz que queremos, esta seria la mejor opcion, y se realizaria de la siguiente forma
 - sudo ifdown enp0s3
 - sudo ifup enp0s3
 
-Configuracion del DNS
-- fichero/etc/resolv.conf
+Para configurar el servidor DNS desberemos poner la siguiente direccion **fichero/etc/resolv.conf**, dentro de esta deberemos escribir lo siguiente:
 - nameserver 8.8.8.8
 
 Comprobar la version de una maquina -> lsd_release -a
