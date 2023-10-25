@@ -4,16 +4,16 @@ Utilizaremos el comando **"nano \etc\network\interfaces"** para entrar en la con
 El comando **nano** se utiliza para entrar o modificar el archivo.
 
 
-Para hacer que nos asignen una IP dinamica por DHCP, escribiremos lo siguiente en el fichero **interfaces**
-auto enp0s3
-iface enp0s3 inet dhcp
+Para hacer que nos asignen una IP dinamica por DHCP, escribiremos lo siguiente en el fichero **interfaces**.
+- auto enp0s3
+- iface enp0s3 inet dhcp
 
-Para asignar una IP estatica , escribiremos lo sigueiente en el fichero **interfaces**
-auto enp0s3
-iface enp0s3 inet static
-address 192.255.255.0
-netmask 255.255.255.0
-gateway 192.168.1.1
+Para asignar una IP estatica , escribiremos lo sigueiente en el fichero **interfaces**.
+- auto enp0s3
+- iface enp0s3 inet static
+- address 192.255.255.0
+- netmask 255.255.255.0
+- gateway 192.168.1.1
 
 (#) -> funciona para comentar una linea y decir que esa linea es puro texto y no lo interprete.
 
