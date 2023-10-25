@@ -1,14 +1,14 @@
 ## VERSIONES ANTERIORES A LA 17.10
 
-Utilizaremos el comando *"nano \etc\network\interfaces"* para entrar en la configuracion de las redes.
-El comando *nano* se utiliza para entrar o modificar el archivo.
+Utilizaremos el comando **"nano \etc\network\interfaces"** para entrar en la configuracion de las redes.
+El comando **nano** se utiliza para entrar o modificar el archivo.
 
-Para modificar 
-DHCP -> 
+
+Para hacer que nos asignen una IP dinamica por DHCP, escribiremos lo siguiente en el fichero **interfaces**
 auto enp0s3
 iface enp0s3 inet dhcp
 
-Estatica ->
+Para asignar una IP estatica , escribiremos lo sigueiente en el fichero **interfaces**
 auto enp0s3
 iface enp0s3 inet static
 address 192.255.255.0
