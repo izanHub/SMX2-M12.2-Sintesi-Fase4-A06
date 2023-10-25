@@ -15,7 +15,8 @@ Para asignar una IP estatica , escribiremos lo sigueiente en el fichero **interf
 - netmask 255.255.255.0
 - gateway 192.168.1.1
 
-Aqui hos dejamos una representación de como queda todo en la terminal
+Aqui hos dejamos una representación de como queda todo en la terminal.
+
 [(E+200U)"imagen"]
 
 (#) -> funciona para comentar una linea y decir que esa linea es puro texto y no lo interprete.
@@ -52,10 +53,12 @@ Despues de establecer la ip con la mascara y el gateway, establecermos el servid
 
 Para apolicar todos estos cambios usaremos el comando **sudo netplan apply**
 
-Aqui hos dejamos una representación de como queda todo en la terminal
+Aqui hos dejamos una representación de como queda todo en la terminal.
+
 [(E+200U)"imagen"]
 
 Para establecer una IP dinamica simplemente tendremos que poner "yes" en el apartado del dhcp y escribir el comando **sudo netplan apply** para aplicar los cambios, tras hacer esto se nos asignara una IP automaticamente.
 
-Aqui hos dejamos una representación de como queda todo en la terminal
+Aqui hos dejamos una representación de como queda todo en la terminal.
+
 [(E+200U)"imagen"]
