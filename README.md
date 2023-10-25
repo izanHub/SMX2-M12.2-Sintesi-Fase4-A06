@@ -1,6 +1,8 @@
-VERSIONES ANTERIORES A LA 17.10
-Como cambiar las IP's en linux -> \etc\network\interfaces
-modificar ficheros en linux -> nano
+## VERSIONES ANTERIORES A LA 17.10
+Utilizaremos el comando *"nano \etc\network\interfaces"* para entrar en la configuracion de las redes
+El comando *nano* se utiliza para entrar o modificar el archivo.
+
+
 DHCP -> 
 auto enp0s3
 iface enp0s3 inet dhcp
@@ -12,7 +14,7 @@ address 192.255.255.0
 netmask 255.255.255.0
 gateway 192.168.1.1
 
-# -> funciona para comentar una linea y decir que esa linea es puro texto y no lo interprete.
+(#) -> funciona para comentar una linea y decir que esa linea es puro texto y no lo interprete.
 
 Reiniciar todas las interficies
 - sudo service network restart
