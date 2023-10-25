@@ -29,9 +29,9 @@ Tambien tenemos la opcion de reiniciar solo la interfaz que queremos, esta seria
 Para configurar el servidor DNS desberemos poner la siguiente direccion **fichero/etc/resolv.conf**, dentro de esta deberemos escribir lo siguiente:
 - nameserver 8.8.8.8
 
-Comprobar la version de una maquina -> lsd_release -a
 
-VERSIONES POSTERIORES A LA 17.10
+## VERSIONES POSTERIORES A LA 17.10
+
 Estas versiones utilizan netplan.
  
  /etc/netplan/****.yaml
