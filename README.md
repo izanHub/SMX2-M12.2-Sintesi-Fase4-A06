@@ -17,7 +17,6 @@ Para asignar una IP estatica , escribiremos lo sigueiente en el fichero **interf
 
 Aqui hos dejamos una representación de como queda todo en la terminal.
 
-
 [(E+200U)"imagen"]
 
 (#) -> funciona para comentar una linea y decir que esa linea es puro texto y no lo interprete.
